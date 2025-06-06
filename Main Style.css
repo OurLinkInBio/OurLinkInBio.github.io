@@ -342,6 +342,7 @@ body {
         	display: flex;
         	justify-content: right;
         	background-color: #1a1a1a;
+        	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
       	}
       	nav a {
         	text-decoration: none;
