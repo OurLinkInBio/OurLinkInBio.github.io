@@ -13,9 +13,9 @@ body {
       }
 
     a{
+      color: #c4c4c4;
       text-decoration: none;
-      color:rgb(0, 106, 255);
-    }
+    } 
     
     /* #region Nav Bar Elements */
       nav {
@@ -71,10 +71,7 @@ body {
       }
     /* #endregion */
 
-    a{
-      color: #c4c4c4;
-      text-decoration: none;
-    }
+    
 
     /* #region Sections */
 
@@ -304,23 +301,24 @@ body {
       width: 100%;
     }
     .column-left img{
-      width: 100%;
+      width: 200px;
+      height: 100%;
       border-radius: 20px;
     }
   
   }
 
-/* Mobile CSS Elements */
-@media only screen and (max-width: 971px) {
-      * {
+@media only screen and (max-width: 970px) {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
     a{
+      color: #c4c4c4;
       text-decoration: none;
-      color:rgb(0, 106, 255);
+      font-size: 10px;
     }
     
     /* #region Nav Bar Elements */
@@ -337,6 +335,7 @@ body {
         color: #c4c4c4;
         font-weight: bold;
         transition: transform 0.5s;
+        font-size: 20px;
       }
       nav a:hover{
         transform: translateY(-5px);
@@ -354,8 +353,7 @@ body {
         background: #333;
         border-radius: 300px;
         align-items: center;
-        padding-bottom: 2px;
-        padding-right: 2px;
+        padding: 4px;
       }
       .hero h1 {
         font-size: 48px;
@@ -385,7 +383,7 @@ body {
         text-align: center;
       }
       .section h2 {
-        font-size: 32px;
+        font-size: 20px;
         margin-bottom: 40px;
       }
 
@@ -397,10 +395,14 @@ body {
           gap: 20px;
         }
         .game-card {
+          background-color: #333;
           text-align: left;
           width: 200px;
-          padding: 10px;
           border-radius: 10px;
+          padding-top: 2px;
+          padding-left: 2px;
+          padding-right: 2px;
+          padding-bottom: -10px;
           color: #c4c4c4;
           box-shadow: 0 2px 6px #333;
           transition: transform 0.5s;
@@ -427,9 +429,6 @@ body {
       padding-left: 25px;
       padding-right: 25px;
     }
-    img{
-      width: 150px;
-    }
 
     /* #region Game Page Elements */
     
@@ -437,14 +436,11 @@ body {
 
         .devlog {
           background-color: rgba(0, 0, 0, 0.5);
-          padding: 20px;
+          padding: 10px;
           border-radius: 30px;
           box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-          margin: 20px 0;
-        }
-        .devlog img{
-          max-width: 150px;
-          border-radius: 30px;
+          margin: auto;
+          width: 50%;
         }
         .devlog h3 {
           text-align: left;
@@ -456,6 +452,10 @@ body {
         }
         .devlog p {
           text-align: left;
+        }
+        .devlog img{
+          width: 300px;
+          border-radius: 20px;
         }
 
       /* #endregion */
@@ -564,7 +564,7 @@ body {
       color: #c4c4c4;
       text-align: left;
       background: none;
-      width: 50%;
+      width: 25%;
       padding: 9px 30px;
       border-radius: 30px;
       border: 2px solid #333333;
@@ -591,5 +591,22 @@ body {
 
     /* #endregion */
   
+    .column-ruler {
+      display: flex;
+      align-items: center;
+      gap: 12px; /* Reduce this value for a smaller gap */
+    }
 
-}
+    .column-left{
+      width: 40%;
+    }
+    .column-right{
+      width: 100%;
+    }
+    .column-left img{
+      width: 100px;
+      height: 100%;
+      border-radius: 20px;
+    }
+  
+  }
