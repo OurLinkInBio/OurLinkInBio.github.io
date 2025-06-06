@@ -680,17 +680,13 @@ body {
     .column-left img {
       width: 100% !important; /* Make image responsive */
       max-width: 100px;       /* Optional: limit max image width */
+	  border-radius: 20px;
       height: auto !important;
       display: flex;
       justify-content: center;
     }
     .column-right{
       width: 100%;
-    }
-    .column-left img{
-      width: 200px;
-      height: 100%;
-      border-radius: 20px;
     }
   
   }
