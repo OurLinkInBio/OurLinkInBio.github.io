@@ -297,12 +297,18 @@ body {
   
     .column-ruler {
       display: flex;
-      align-items: center;
-      gap: 12px; /* Reduce this value for a smaller gap */
+      flex-direction: column; /* Stack image and content vertically */
+      align-items: center;    /* Center them horizontally */
+      gap: 8px;               /* Optional: space between image and text */
     }
 
-    .column-left{
-      width: 40%;
+    .column-left,
+    .column-left img {
+      width: 100% !important; /* Make image responsive */
+      max-width: 200px;       /* Optional: limit max image width */
+      height: auto !important;
+      display: flex;
+      justify-content: center;
     }
     .column-right{
       width: 100%;
@@ -665,18 +671,24 @@ body {
   
     .column-ruler {
       display: flex;
-      align-items: center;
-      gap: 12px; /* Reduce this value for a smaller gap */
+      flex-direction: column; /* Stack image and content vertically */
+      align-items: center;    /* Center them horizontally */
+      gap: 8px;               /* Optional: space between image and text */
     }
 
-    .column-left{
-      width: 40%;
+    .column-left,
+    .column-left img {
+      width: 100% !important; /* Make image responsive */
+      max-width: 200px;       /* Optional: limit max image width */
+      height: auto !important;
+      display: flex;
+      justify-content: center;
     }
     .column-right{
       width: 100%;
     }
     .column-left img{
-      width: 150px;
+      width: 200px;
       height: 100%;
       border-radius: 20px;
     }
