@@ -3,95 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="Images/Logo New.png">
+  <link rel="icon" href="Images/Krimson Knights/KrimsonKnightsLogo.png">
   <link rel="stylesheet" href="Main Style.css?v=1.0">
-  <title>Wi.Bi Studios</title>
+  <title>Krimson Lord</title>
   
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="Projects.html">Projects</a>
-  <a href="About.html">About</a>
-  <a href="Contact.html">Contact</a>
+  <a href="index.html">Krimson Lord</a>
+  <a href="Bingaling.html">Lord Bingaling</a>
+  <a href="MegaVerse.html">MegaVerse</a>
 </nav>
 
 <div class="hero">
-  <img src="Images/Logo New.png" alt="Slide 1"> <br> <br>
+  <img src="Images/Krimson Knights/KrimsonKnightsLogo.png" alt="Slide 1"> <br> <br>
   <a href="Projects.html" class="button">Our Projects</a>
 </div>
 
-<div class="section" id="slideshow">
-  <div class="slideshow">
-    <div class="slide">
-      <img src="Images/M.A.R.V.I.S/Cover Img.png" alt="Slide 1">
-				<div class="slide-text">
-					<div class="slide-name">M.A.R.V.I.S</div>
-					<div class="slide-description">Coming 2027</div>
-				</div>
-				<a class="slide-button" href="Projects/M.A.R.V.I.S Game Page.html">Learn More!</a>
-    </div>
-    <div class="slide">
-      <img src="Images/Cover Image.jpg" alt="Slide 1">
-				<div class="slide-text">
-					<div class="slide-name">Development Started</div>
-					<div class="slide-description">View our latest project, and <br> it's development</div>
-				</div>
-				<a class="slide-button" href="Projects/Current Projects/Project Splatter Storm.html">Learn More!</a>
-    </div>
-    <div class="slide">
-      <img src="Images/Cover Image.png" alt="Slide 1">
-				<div class="slide-text">
-					<div class="slide-name">The Forgotten Realms</div>
-					<div class="slide-description">Coming Later</div>
-				</div>
-				<a class="slide-button" href="Projects/Current Projects/Project Splatter Storm.html">Learn More!</a>
-    </div>
-  </div>
-
-  <div class="thumbnail-container">
-    <div class="thumbnail" onclick="currentSlide(0)"></div>
-    <div class="thumbnail" onclick="currentSlide(1)"></div>
-    <div class="thumbnail" onclick="currentSlide(2)"></div>
-  </div>
-
-  <script>
-    let slideIndex = 0;
-    showSlides();
-  
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("slide");
-      let dots = document.getElementsByClassName("thumbnail");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        dots[i].style.background = "#c4c4c4";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].style.background = "#ffffff"
-      setTimeout(showSlides, 30000); // Change image every 30 seconds
-    }
-  
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-  
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-  </script>
-</div>
-
 <div class="section" id="featured">
-  <h2>Featured Games</h2>
-  <div class="games">
-    <div class="game-card">
-      <a href="Projects/M.A.R.V.I.S Game Page.html"><img src="Images/M.A.R.V.I.S/Cover Img.png" alt="M.A.R.V.I.S"></a>
+  <h2>Social Medias</h2>
+  <a href="https://www.youtube.com/@KrimsonKnightsYT" target="_blank">
+    <div class="devlog">
+      <div class="column-ruler">
+        <div class="column-left">
+          <img src="Images/Social Content Logos/YouTube Logo.png" alt="">
+        </div>
+        <div class="column-content">
+          <h3>YouTube</h3>
+          <p>Subscribe to our YouTube for new and ever improving content</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </a>
 </div>
 
 <div class="section" id="more">

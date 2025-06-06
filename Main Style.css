@@ -71,6 +71,11 @@ body {
       }
     /* #endregion */
 
+    a{
+      color: #c4c4c4;
+      text-decoration: none;
+    }
+
     /* #region Sections */
 
       .section {
@@ -134,7 +139,8 @@ body {
           padding: 20px;
           border-radius: 30px;
           box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-          margin: 20px 0;
+          margin: auto;
+          width: 30%;
         }
         .devlog h3 {
           text-align: left;
@@ -150,7 +156,6 @@ body {
         .devlog img{
           width: 300px;
           border-radius: 20px;
-          margin-bottom: 20px;
         }
 
       /* #endregion */
@@ -286,12 +291,27 @@ body {
 
     /* #endregion */
   
-  
+    .column-ruler {
+      display: flex;
+      align-items: center;
+      gap: 12px; /* Reduce this value for a smaller gap */
+    }
+
+    .column-left{
+      width: 40%;
+    }
+    .column-right{
+      width: 100%;
+    }
+    .column-left img{
+      width: 100%;
+      border-radius: 20px;
+    }
   
   }
 
-    /* Mobile CSS Elements */
-    @media only screen and (max-width: 971px) {
+/* Mobile CSS Elements */
+@media only screen and (max-width: 971px) {
       * {
         margin: 0;
         padding: 0;
@@ -572,4 +592,4 @@ body {
     /* #endregion */
   
 
-    }
+}
