@@ -509,7 +509,7 @@ body {
           	border-radius: 30px;
           	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
           	margin: auto;
-          	width: 90%;
+          	width: 75%;
         }
 		.devlog a{
 			font-size: 13px;;
@@ -524,10 +524,6 @@ body {
         }
         .devlog p {
           text-align: left;
-        }
-        .devlog img{
-          width: 350px;
-          border-radius: 20px;
         }
 
       /* #endregion */
@@ -664,35 +660,22 @@ body {
     /* #endregion */
   
     .column-ruler {
-      display: flex;
-      align-items: center;
-      gap: 12px; /* Reduce this value for a smaller gap */
+      	display: flex;
+		flex-direction: row;
+      	align-items: center;
+      	gap: 12px; /* Reduce this value for a smaller gap */
     }
 
-<<<<<<< HEAD
-    .column-left,
-    .column-left img {
-      width: 100% !important; /* Make image responsive */
-      max-width: 100px;       /* Optional: limit max image width */
-	  border-radius: 20px;
-      height: auto !important;
-      display: flex;
-      justify-content: center;
-=======
     .column-left{
-      width: 40%;
->>>>>>> parent of a08d2a6 (Update Main Style.css)
+      	width: 40%;
     }
     .column-right{
-      width: 100%;
+      	width: 100%;
     }
-<<<<<<< HEAD
-=======
-    .column-left img{
-      width: 150px;
-      height: 100%;
-      border-radius: 20px;
+
+  	.column-left img{
+      	width: 150px;
+      	height: 100%;
+      	border-radius: 20px;
     }
->>>>>>> parent of a08d2a6 (Update Main Style.css)
-  
   }
