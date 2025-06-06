@@ -325,7 +325,7 @@ body {
     a{
       color: #c4c4c4;
       text-decoration: none;
-      font-size: 18px;
+	  font-size: 13px;
     }
 
 	.Desktop{
@@ -392,6 +392,7 @@ body {
 
 	/* Links inside the dropdown */
 	.dropdown-content a {
+		font-size: 18px;
     	padding: 12px 16px;
     	text-decoration: none;
     	display: block;
@@ -510,6 +511,9 @@ body {
           margin: auto;
           width: 75%;
         }
+		.devlog a{
+			font-size: 13px;;
+		}
         .devlog h3 {
           text-align: left;
           text-shadow: 3px 3px black;
