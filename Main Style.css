@@ -509,7 +509,8 @@ body {
           	border-radius: 30px;
           	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
           	margin: auto;
-          	width: 75%;
+          	width: auto;
+			margin: 20px;
         }
 		.devlog a{
 			font-size: 13px;;
