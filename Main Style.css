@@ -297,18 +297,12 @@ body {
   
     .column-ruler {
       display: flex;
-      flex-direction: column; /* Stack image and content vertically */
-      align-items: center;    /* Center them horizontally */
-      gap: 8px;               /* Optional: space between image and text */
+      align-items: center;
+      gap: 12px; /* Reduce this value for a smaller gap */
     }
 
-    .column-left,
-    .column-left img {
-      width: 100% !important; /* Make image responsive */
-      max-width: 200px;       /* Optional: limit max image width */
-      height: auto !important;
-      display: flex;
-      justify-content: center;
+    .column-left{
+      width: 40%;
     }
     .column-right{
       width: 100%;
@@ -671,11 +665,11 @@ body {
   
     .column-ruler {
       display: flex;
-      flex-direction: column; /* Stack image and content vertically */
-      align-items: center;    /* Center them horizontally */
-      gap: 8px;               /* Optional: space between image and text */
+      align-items: center;
+      gap: 12px; /* Reduce this value for a smaller gap */
     }
 
+<<<<<<< HEAD
     .column-left,
     .column-left img {
       width: 100% !important; /* Make image responsive */
@@ -684,9 +678,21 @@ body {
       height: auto !important;
       display: flex;
       justify-content: center;
+=======
+    .column-left{
+      width: 40%;
+>>>>>>> parent of a08d2a6 (Update Main Style.css)
     }
     .column-right{
       width: 100%;
     }
+<<<<<<< HEAD
+=======
+    .column-left img{
+      width: 150px;
+      height: 100%;
+      border-radius: 20px;
+    }
+>>>>>>> parent of a08d2a6 (Update Main Style.css)
   
   }
