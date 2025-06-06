@@ -16,6 +16,13 @@ body {
       color: #c4c4c4;
       text-decoration: none;
     } 
+
+	.Desktop{
+		display: block;
+	}
+	.Mobile{
+		display: none;
+	}
     
     /* #region Nav Bar Elements */
       nav {
@@ -318,29 +325,90 @@ body {
     a{
       color: #c4c4c4;
       text-decoration: none;
-      font-size: 10px;
+      font-size: 18px;
     }
-    
-    /* #region Nav Bar Elements */
-      nav {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0;
-        background-color: #1a1a1a;
-        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      }
-      nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #c4c4c4;
-        font-weight: bold;
-        transition: transform 0.5s;
-        font-size: 20px;
-      }
-      nav a:hover{
-        transform: translateY(-5px);
-      }
-    /* #endregion */
+
+	.Desktop{
+		display: none;
+	}
+	.Mobile{
+		display: block;
+	}
+
+/* #region Nav Bar Elements */
+
+	/* #region Base Bar Elements */
+      	nav {
+        	display: flex;
+        	justify-content: right;
+        	background-color: #1a1a1a;
+        	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      	}
+      	nav a {
+        	text-decoration: none;
+        	color: #c4c4c4;
+        	font-weight: bold;
+        	transition: transform 0.5s;
+      	}
+      	nav a:hover{
+        	transform: translateY(-5px);
+      	}
+    /* #endregion Base Bar Elements */
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+		float: right;
+		position: relative;
+	}
+
+	.dropdown img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.dropbtn {
+		display: flex;
+     	align-items: right;
+    	cursor: pointer;
+    	background: none;
+    	border: none;
+    	border-radius: 30px;
+		padding-right: 20px;
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+		width: 225px;
+   		display: none;
+    	background-color: rgb(0, 0, 0, 0.5);
+    	position: absolute;
+    	text-align: left;
+    	min-width: 160px;
+    	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    	z-index: 5;
+    	border-radius: 30px;
+		right: 0; /* Add this */
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+    	padding: 12px 16px;
+    	text-decoration: none;
+    	display: block;
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {
+    	background-color: rgb(128, 128, 128, 0.5);
+    	border-radius: 30px;
+	}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+    	display: block;
+	}
+/* #endregion Nav Bar Dropdown Elements */
+
 
     /* #region Hero Section Elements */
       .hero {
@@ -440,7 +508,7 @@ body {
           border-radius: 30px;
           box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
           margin: auto;
-          width: 50%;
+          width: 75%;
         }
         .devlog h3 {
           text-align: left;
@@ -454,7 +522,7 @@ body {
           text-align: left;
         }
         .devlog img{
-          width: 300px;
+          width: 350px;
           border-radius: 20px;
         }
 
@@ -604,7 +672,7 @@ body {
       width: 100%;
     }
     .column-left img{
-      width: 100px;
+      width: 150px;
       height: 100%;
       border-radius: 20px;
     }
