@@ -1,0 +1,575 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222222;
+  color: #c4c4c4;
+}
+
+
+@media only screen and (min-width: 971px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+    a{
+      text-decoration: none;
+      color:rgb(0, 106, 255);
+    }
+    
+    /* #region Nav Bar Elements */
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #c4c4c4;
+        font-weight: bold;
+        transition: transform 0.5s;
+      }
+      nav a:hover{
+        transform: translateY(-5px);
+      }
+    /* #endregion */
+
+    /* #region Hero Section Elements */
+      .hero {
+        text-align: center;
+        padding: 80px 20px;
+        max-width: 1500;
+      }
+      .hero img{
+        width: 300px;
+        background: #333;
+        border-radius: 300px;
+        align-items: center;
+        padding: 4px;
+      }
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+      .button {
+        display: inline-block;
+        color: #c4c4c4;
+        padding: 12px 24px;
+        background: none;
+        border: 2px solid #333;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: transform 0.5s;
+      }
+      .button:hover{
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
+    /* #endregion */
+
+    /* #region Sections */
+
+      .section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+      .section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+
+      /* #region Game Card Section */
+        .games, .coming-soon, .more {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+        .game-card {
+          background-color: #333;
+          text-align: left;
+          width: 200px;
+          border-radius: 10px;
+          padding-top: 2px;
+          padding-left: 2px;
+          padding-right: 2px;
+          padding-bottom: -10px;
+          color: #c4c4c4;
+          box-shadow: 0 2px 6px #333;
+          transition: transform 0.5s;
+          cursor: pointer;
+        }
+        .game-card img {
+          width: 100%;
+          border-radius: 8px;
+          
+        }
+        .game-card h1{
+          font-size: 20px;
+        }
+        .game-card:hover{
+          transform: translateY(-5px);
+        }
+      /* #endregion */
+
+    /* #endregion */
+
+    .small-container {
+      max-width: 1200px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    /* #region Game Page Elements */
+    
+      /* #region Devlog Elements */
+
+        .devlog {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 20px;
+          border-radius: 30px;
+          box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+          margin: 20px 0;
+        }
+        .devlog h3 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+        }
+        .devlog h2 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+        }
+        .devlog p {
+          text-align: left;
+        }
+        .devlog img{
+          width: 300px;
+          border-radius: 20px;
+          margin-bottom: 20px;
+        }
+
+      /* #endregion */
+
+    /* #endregion */
+
+    /* #region Slideshow Elements */
+      .slideshow {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .slide {
+        display: none;
+        padding: 10px;
+        background: #333;
+        border-radius: 10px;
+      }
+      .slide.active {
+        display: block;
+      }
+      
+      /* Slide image */
+      .slideshow img {
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Slide text */
+      .slide-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+      }
+
+      /* Slide name */
+      .slide-name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Slide description */
+      .slide-description {
+        font-size: 16px;
+      }
+
+      /* Thumbnails */
+    .thumbnail-container {
+      display: flex;
+      max-block-size: 50%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .thumbnail {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 30px;
+      border: 0.5px solid black;
+      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      background-color: #c4c4c4;
+      transition: transform 0.3s;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.1);
+    }
+
+    /* Button */
+    .slide-button {
+      display: inline-block;
+      background: #333;
+      border: none;
+      font-weight: bold;
+      color: #c4c4c4;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .slide-button:hover {
+      background-color: #232323;
+    }
+    /* #endregion */
+    
+    /* #region Form Elements */
+    form{
+        padding: 60px 20px;
+        text-align: center;
+    }
+    form input {
+      color: #c4c4c4;
+      text-align: left;
+      background: none;
+      width: 25%;
+      padding: 9px 30px;
+      border-radius: 30px;
+      border: 2px solid #333333;
+      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+    }
+    form button {
+      display: inline-block;
+      color: #c4c4c4;
+      background: none;
+      padding: 9px 30px;
+      margin: 30px 0;
+      border-radius: 30px;
+      border: 2px solid #333333;
+      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      transition: transform 0.5s;
+    }
+    form button:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+    form input::placeholder{
+      color: #a3a3a3;
+    }
+
+    /* #endregion */
+  
+  
+  
+  }
+
+    /* Mobile CSS Elements */
+    @media only screen and (max-width: 971px) {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+    a{
+      text-decoration: none;
+      color:rgb(0, 106, 255);
+    }
+    
+    /* #region Nav Bar Elements */
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #c4c4c4;
+        font-weight: bold;
+        transition: transform 0.5s;
+      }
+      nav a:hover{
+        transform: translateY(-5px);
+      }
+    /* #endregion */
+
+    /* #region Hero Section Elements */
+      .hero {
+        text-align: center;
+        padding: 80px 20px;
+        max-width: 1500;
+      }
+      .hero img{
+        width: 300px;
+        background: #333;
+        border-radius: 300px;
+        align-items: center;
+        padding-bottom: 2px;
+        padding-right: 2px;
+      }
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+      .button {
+        display: inline-block;
+        color: #c4c4c4;
+        padding: 12px 24px;
+        background: none;
+        border: 2px solid #333;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: transform 0.5s;
+      }
+      .button:hover{
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
+    /* #endregion */
+
+    /* #region Sections */
+
+      .section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+      .section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+
+      /* #region Game Card Section */
+        .games, .coming-soon, .more {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+        .game-card {
+          text-align: left;
+          width: 200px;
+          padding: 10px;
+          border-radius: 10px;
+          color: #c4c4c4;
+          box-shadow: 0 2px 6px #333;
+          transition: transform 0.5s;
+          cursor: pointer;
+        }
+        .game-card img {
+          width: 100%;
+          border-radius: 8px;
+          
+        }
+        .game-card h1{
+          font-size: 20px;
+        }
+        .game-card:hover{
+          transform: translateY(-5px);
+        }
+      /* #endregion */
+
+    /* #endregion */
+
+    .small-container {
+      max-width: 1200px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    img{
+      width: 150px;
+    }
+
+    /* #region Game Page Elements */
+    
+      /* #region Devlog Elements */
+
+        .devlog {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 20px;
+          border-radius: 30px;
+          box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+          margin: 20px 0;
+        }
+        .devlog img{
+          max-width: 150px;
+          border-radius: 30px;
+        }
+        .devlog h3 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+        }
+        .devlog h2 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+        }
+        .devlog p {
+          text-align: left;
+        }
+
+      /* #endregion */
+
+    /* #endregion */
+
+    /* #region Slideshow Elements */
+      .slideshow {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .slide {
+        display: none;
+        padding: 10px;
+        background: #333;
+        border-radius: 10px;
+      }
+      .slide.active {
+        display: block;
+      }
+      
+      /* Slide image */
+      .slideshow img {
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Slide text */
+      .slide-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+      }
+
+      /* Slide name */
+      .slide-name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Slide description */
+      .slide-description {
+        font-size: 16px;
+      }
+
+      /* Thumbnails */
+    .thumbnail-container {
+      display: flex;
+      max-block-size: 50%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .thumbnail {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 30px;
+      border: 0.5px solid black;
+      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      background-color: #c4c4c4;
+      transition: transform 0.3s;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.1);
+    }
+
+    /* Button */
+    .slide-button {
+      display: inline-block;
+      background: #333;
+      border: none;
+      font-weight: bold;
+      color: #c4c4c4;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .slide-button:hover {
+      background-color: #232323;
+    }
+    /* #endregion */
+    
+    /* #region Form Elements */
+    form{
+        padding: 60px 20px;
+        text-align: center;
+    }
+    form input {
+      color: #c4c4c4;
+      text-align: left;
+      background: none;
+      width: 50%;
+      padding: 9px 30px;
+      border-radius: 30px;
+      border: 2px solid #333333;
+      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+    }
+    form button {
+      display: inline-block;
+      color: #c4c4c4;
+      background: none;
+      padding: 9px 30px;
+      margin: 30px 0;
+      border-radius: 30px;
+      border: 2px solid #333333;
+      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      transition: transform 0.5s;
+    }
+    form button:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+    form input::placeholder{
+      color: #a3a3a3;
+    }
+
+    /* #endregion */
+  
+
+    }
