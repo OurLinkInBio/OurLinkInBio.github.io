@@ -668,11 +668,11 @@ body {
 
 	.column-left,
 	.column-left img {
-  		width: 100% !important;    /* Make image responsive */
+  		width: 200px !important;    /* Make image responsive */
   		max-width: 200px;          /* Optional: limit max image width */
   		height: auto !important;
   		display: flex;
-  		justify-content: center;
+		border-radius: 20px;
 	}
     /*.column-left{
       	width: 40%;
