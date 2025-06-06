@@ -666,16 +666,24 @@ body {
       	gap: 12px; /* Reduce this value for a smaller gap */
     }
 
-    .column-left{
+	.column-left,
+	.column-left img {
+  		width: 100% !important;    /* Make image responsive */
+  		max-width: 200px;          /* Optional: limit max image width */
+  		height: auto !important;
+  		display: flex;
+  		justify-content: center;
+	}
+    /*.column-left{
       	width: 40%;
-    }
+    }*/
     .column-right{
       	width: 100%;
     }
 
-  	.column-left img{
+  	/*.column-left img{
       	width: 150px;
       	height: 100%;
       	border-radius: 20px;
-    }
+    }*/
   }
