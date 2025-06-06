@@ -668,7 +668,7 @@ body {
 
 	.column-left,
 	.column-left img {
-  		width: 200px !important;    /* Make image responsive */
+  		width: 150px !important;    /* Make image responsive */
   		max-width: 200px;          /* Optional: limit max image width */
   		height: auto !important;
   		display: flex;
