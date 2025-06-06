@@ -504,12 +504,12 @@ body {
       /* #region Devlog Elements */
 
         .devlog {
-          background-color: rgba(0, 0, 0, 0.5);
-          padding: 10px;
-          border-radius: 30px;
-          box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-          margin: auto;
-          width: 75%;
+          	background-color: rgba(0, 0, 0, 0.5);
+          	padding: 10px;
+          	border-radius: 30px;
+          	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+          	margin: auto;
+          	width: 90%;
         }
 		.devlog a{
 			font-size: 13px;;
