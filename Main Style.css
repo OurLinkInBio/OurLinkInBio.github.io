@@ -25,23 +25,77 @@ body {
 	}
     
     /* #region Nav Bar Elements */
-      nav {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0;
-        background-color: #1a1a1a;
-        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      }
-      nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #c4c4c4;
-        font-weight: bold;
-        transition: transform 0.5s;
-      }
-      nav a:hover{
-        transform: translateY(-5px);
-      }
+      	nav {
+        	display: flex;
+        	justify-content: center;
+			vertical-align: middle;
+        	padding: 20px 0;
+        	background-color: #1a1a1a;
+        	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+      	}
+      	nav a {
+        	margin: 0 15px;
+        	text-decoration: none;
+        	color: #c4c4c4;
+        	font-weight: bold;
+        	transition: transform 0.5s;
+      	}
+      	nav a:hover{
+        	transform: translateY(-5px);
+      	}
+
+		/* The container <div> - needed to position the dropdown content */
+		.dropdown {
+			float: right;
+			position: relative;
+		}
+		.dropdown img {
+			width: 50px;
+			height: 50px;
+		}
+		.dropbtn {
+			display: flex;
+    		cursor: pointer;
+    		background: none;
+    		border: none;
+    		border-radius: 30px;
+			padding-right: 20px;
+			padding-bottom: 5px;
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+			width: 225px;
+   			display: none;
+    		background-color: rgb(0, 0, 0, 0.5);
+    		position: absolute;
+    		text-align: left;
+    		min-width: 160px;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    		z-index: 5;
+    		border-radius: 30px;
+        	left: 50%; /* Add this */
+        	transform: translateX(-50%); /* Add this */
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			font-size: 18px;
+    		padding: 12px 16px;
+    		text-decoration: none;
+    		display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {
+    		background-color: rgb(128, 128, 128, 0.5);
+    		border-radius: 30px;
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+    		display: block;
+		}
     /* #endregion */
 
     /* #region Hero Section Elements */
@@ -77,8 +131,6 @@ body {
         cursor: pointer;
       }
     /* #endregion */
-
-    
 
     /* #region Sections */
 
@@ -127,22 +179,23 @@ body {
 
     /* #endregion */
 
-    .small-container {
-      max-width: 1200px;
-      margin: auto;
-      padding-left: 25px;
-      padding-right: 25px;
-    }
+	/* #region Small Container */
+    	.small-container {
+      		max-width: 1200px;
+      		margin: auto;
+      		padding-left: 25px;
+      		padding-right: 25px;
+    	}
+	/* #endregion Small Container */
 
     /* #region Game Page Elements */
     
-      /* #region Devlog Elements */
+        /* #region Devlog Elements */
 
         .devlog {
           background-color: rgba(0, 0, 0, 0.5);
           padding: 20px;
           border-radius: 30px;
-          box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
           margin: auto;
           width: 30%;
         }
@@ -162,7 +215,7 @@ body {
           border-radius: 20px;
         }
 
-      /* #endregion */
+        /* #endregion */
 
     /* #endregion */
 
@@ -294,26 +347,75 @@ body {
     }
 
     /* #endregion */
+	
+	/* #region Column Ruler Elements */
+    	.column-ruler {
+      		display: flex;
+      		align-items: center;
+      		gap: 12px; /* Reduce this value for a smaller gap */
+    	}
+    	.column-left{
+      		width: 40%;
+    	}
+    	.column-right{
+     	 	width: 100%;
+    	}
+    	.column-left img{
+      	    width: auto;
+            max-width: 200px;
+      	    height: 100%;
+      	    border-radius: 20px;
+    	}
+        .Day-Column-Left{
+          width: 30%;
+        }
+        .Day-Column-Right{
+          width: 70%;
+        }
+	/* #endregion */
   
-    .column-ruler {
-      display: flex;
-      align-items: center;
-      gap: 12px; /* Reduce this value for a smaller gap */
-    }
+    /* #region Schedule Elements */
 
-    .column-left{
-      width: 40%;
-    }
-    .column-right{
-      width: 100%;
-    }
-    .column-left img{
-      width: 200px;
-      height: 100%;
-      border-radius: 20px;
-    }
-  
-  }
+        .Schedule {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+            margin: auto;
+            width: 30%;
+        }
+        .Schedule h3 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+        }
+        .Schedule h2 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+        }
+        .Schedule h1 {
+          text-align: left;
+          text-shadow: 3px 3px black;
+          font-size: 22px;
+        }
+        .Schedule p {
+          text-align: left;
+        }
+        .Schedule img{
+          width: 300px;
+          border-radius: 20px;
+        }
+
+        .Day {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+            margin: auto;
+            width: auto;
+        }
+
+        /* #endregion */
+}
 
 @media only screen and (max-width: 970px) {
     * {
@@ -411,23 +513,23 @@ body {
 /* #endregion Nav Bar Dropdown Elements */
 
 
-    /* #region Hero Section Elements */
-      .hero {
-        text-align: center;
+/* #region Hero Section Elements */
+    .hero {
+    	text-align: center;
         padding: 80px 20px;
         max-width: 1500;
-      }
-      .hero img{
+    }
+    .hero img{
         width: 300px;
         border-radius: 300px;
         align-items: center;
         padding: 4px;
-      }
-      .hero h1 {
+    }
+    .hero h1 {
         font-size: 48px;
         margin-bottom: 20px;
-      }
-      .button {
+    }
+    .button {
         display: inline-block;
         color: #c4c4c4;
         padding: 12px 24px;
@@ -437,12 +539,12 @@ body {
         border-radius: 8px;
         font-weight: bold;
         transition: transform 0.5s;
-      }
-      .button:hover{
+    }
+    .button:hover{
         transform: translateY(-5px);
         cursor: pointer;
-      }
-    /* #endregion */
+    }
+/* #endregion */
 
     /* #region Sections */
 
