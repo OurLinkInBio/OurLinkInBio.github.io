@@ -179,7 +179,7 @@ body {
 
     /* #endregion */
 
-	/* #region Small Container */
+	  /* #region Small Container */
     	.small-container {
       		max-width: 1200px;
       		margin: auto;
@@ -789,3 +789,76 @@ body {
       	border-radius: 20px;
     }*/
   }
+
+/* Table Styles */
+table {
+  width: 30%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 1em auto;
+  border-radius: 30px; /* Always rounded */
+  overflow: hidden;    /* Ensures children respect border-radius */
+}
+
+th, td {
+  padding: 0.75em 1em;
+  background: none;
+  border-radius: 0; /* Remove if you want only the table corners rounded */
+}
+
+td img {
+  border-radius: 15px;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s; 
+}
+
+.td img:hover{
+  transform: scale(2);
+  transition: transform 0.3s ease;
+}
+
+/* Add to Main Style.css or inside <style> */
+.ratings-table th, .ratings-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.ratings-table img {
+  border-radius: 8px;
+}
+
+.ratings-table th:first-child,
+.ratings-table td:first-child {
+  width: 140px; /* Adjust as needed */
+  min-width: 120px;
+  max-width: 200px;
+}
+
+/* Add to Main Style.css */
+.table-scroll-x {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.scroll-box {
+  overflow-x: auto;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px #c4c4c4;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Make sure the table fits the scroll box */
+.scroll-box .ratings-table {
+  border-radius: 30px;
+  overflow: hidden;
+  min-width: 700px; /* or whatever fits your columns */
+}
+
+
+

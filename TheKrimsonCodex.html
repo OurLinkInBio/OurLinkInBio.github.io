@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Images/Channel Logos/KrimsonKnightsLogo.png">
+  <link rel="stylesheet" href="Main Style.css?v=1.0">
+  <title>Krimson Knights</title>
+  
+</head>
+<style>
+	.hero img{
+		background: #ff0000;
+	}
+	.scroll-box{
+		box-shadow: 0 2px 4px #ff0000;
+	}
+    .tier-separator td {
+        border-radius: 30px;
+        height: 8px;
+        background: linear-gradient(90deg, #290000 0%, #fc5b5b 100%);
+        border: none;
+        padding: 0;
+    }
+    .scroll-box::-webkit-scrollbar {
+        height: 12px;
+        background: transparent;
+        border-radius: 30px;
+    }
+    .scroll-box::-webkit-scrollbar-thumb {
+        background: #7c0000;
+        border-radius: 30px;
+        border: 3px solid rgba(0,0,0,0.5);
+    }
+    .scroll-box::-webkit-scrollbar-track {
+        background: #7c0000;
+        border-radius: 30px;
+    }
+
+    /* Firefox scrollbar styling */
+    .scroll-box {
+        scrollbar-width: thin;
+        scrollbar-color: #7c0000 rgba(0,0,0,0.2);
+    }
+
+    .ratings-table td img {
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.ratings-table td:not(.tier-image):hover img {
+    transform: scale(1.15);
+    z-index: 2;
+    box-shadow: 0 4px 16px #7c0000aa;
+}
+
+.hero {
+  position: relative;
+  width: 300px;      /* Make width equal to height for a perfect circle */
+  height: 300px;     /* Set to your desired size */
+  margin: 40px auto 0 auto;
+  display: block;
+}
+.hero-img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+  pointer-events: none;
+  object-fit: cover;      /* cover ensures the image fills the circle */
+  border-radius: 50%;     /* makes the image circular */
+  background: #ff0000;    /* fallback background color */
+}
+.hero-img.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+</style>
+<body>
+
+<nav>
+	<!-- #region Desktop Navigation Elements -->
+		<div class="Desktop">
+			<a href="KrimsonKnights.html">Krimson Knights</a>
+			<a href="Bingaling.html">Lord Bingaling</a>
+			<a href="TheSerpentsWhisper.html">The Serpents Whisper</a>
+			<a href="MegaVerse.html">MegaVerse</a>
+
+			<div class="dropdown">
+				<a class="dropbtn">&darr; More &darr;</a>
+				
+			<div class="dropdown-content">
+				<a href="TwistedRealities.html">Twisted Realities</a>
+				<a href="index.html">Wi.Bi Studios</a>
+				<a href="SoulessPhoenix.html">Souless Phoenix</a>
+				<a href="HizeGrimic.html">Hize Grimic</a>
+			</div>
+			</div>
+		</div>
+	<!-- #endregion Desktop Navigation Elements -->
+  	
+	<!-- #region Mobile Navigation Elements -->
+		<div class="Mobile">
+			<div class="dropdown">
+				<button class="dropbtn"><img src="Images/Menu Image.png"></button>
+				
+			<div class="dropdown-content">
+				<a href="KrimsonKnights.html">Krimson Knights</a>
+				<a href="Bingaling.html">Lord Bingaling</a>
+				<a href="TheSerpentsWhisper.html">The Serpents Whisper</a>
+				<a href="MegaVerse.html">MegaVerse</a>
+				<a href="TwistedRealities.html">Twisted Realities</a>
+				<a href="index.html">Wi.Bi Studios</a>
+				<a href="SoulessPhoenix.html">Souless Phoenix</a>
+				<a href="HizeGrimic.html">Hize Grimic</a>
+			</div>
+			</div>
+		</div>
+	<!-- #endregion Mobile Navigation Elements -->
+</nav>
+
+<div class="hero">
+  <img class="hero-img active" src="Images/Channel Logos/The Krimson Codex.png" alt="Slide 1">
+  <img class="hero-img" src="Images/Channel Logos/KrimsonKnightsLogo.png" alt="Slide 2">
+</div>
+
+<br> <br> <br> 
+
+<!-- Ratings Table Start -->
+<div class="scroll-box">
+  <table class="ratings-table">
+    <h2>Ratings</h2>
+	<p>A list of my ratings for games, TV shows, & Films</p>
+	<br> 
+
+    <!-- #region Diamond Tier -->
+    <tr>
+      <td class="tier-image" rowspan="2">
+        <img src="Images/Tier Images/The Krimson Codex/0. Diamond Image.png" alt="Bronze Tier" width="100">
+      </td>
+      <td><img src="Images/Reviews/review1.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review2.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review3.png" alt="" width="100"></td>
+    </tr>
+    <tr>
+      
+    </tr>
+
+    <!-- Tier Separator -->
+    <tr class="tier-separator">
+      <td colspan="4"></td>
+    </tr>
+    <!-- #endregion Diamond Tier -->
+
+    <!-- #region Platinum Tier -->
+    <tr>
+      <td class="tier-image" rowspan="2">
+        <img src="Images/Tier Images/The Krimson Codex/0. Platinum Image.png" alt="Bronze Tier" width="100">
+      </td>
+      <td><a href="https://store.steampowered.com/app/3527290/PEAK/"> <img src="Images/Tier Images/The Krimson Codex/1. PEAK.png" alt="PEAK" width="100"></a></td>
+      <td><img src="Images/Reviews/review2.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review3.png" alt="" width="100"></td>
+    </tr>
+    <tr>
+      
+    </tr>
+
+    <!-- Tier Separator -->
+    <tr class="tier-separator">
+      <td colspan="4"></td>
+    </tr>
+    <!-- #endregion Platinum Tier -->
+
+    <!-- #region Gold Tier -->
+    <tr>
+      <td class="tier-image" rowspan="2">
+        <img src="Images/Tier Images/The Krimson Codex/0. Gold Image.png" alt="Bronze Tier" width="100">
+      </td>
+      <td><img src="Images/Reviews.review1.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review2.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review3.png" alt="" width="100"></td>
+    </tr>
+    <tr>
+      
+    </tr>
+
+    <!-- Tier Separator -->
+    <tr class="tier-separator">
+      <td colspan="4"></td>
+    </tr>
+    <!-- #endregion Gold Tier -->
+
+    <!-- #region Silver Tier -->
+    <tr>
+      <td class="tier-image" rowspan="2">
+        <img src="Images/Tier Images/The Krimson Codex/0. Silver Image.png" alt="Bronze Tier" width="100">
+      </td>
+      <td><img src="Images/Reviews/review1.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review2.png" alt="" width="100"></td>
+      <td><img src="Images/Reviews/review3.png" alt="" width="100"></td>
+    </tr>
+    <tr>
+      
+    </tr>
+
+    <!-- Tier Separator -->
+    <tr class="tier-separator">
+      <td colspan="4"></td>
+    </tr>
+    <!-- #endregion Silver Tier -->
+
+    <!-- #region Bronze Tier -->
+    <tr>
+      <td class="tier-image" rowspan="2">
+        <img src="Images/Tier Images/The Krimson Codex/0. Bronze Image.png" alt="Bronze Tier" width="100">
+      </td>
+      <td><a target="_blank" href="https://store.steampowered.com/app/3393620/?snr=1_5_9__205"><img src="Images/Tier Images/The Krimson Codex/1. Double Shoulders.png" alt="Double Shoulders" width="100"></a>
+      </td>
+    </tr>
+    <tr>
+        
+    </tr>
+    <!-- #endregion Bronze Tier -->
+    
+  </table>
+</div>
+<!-- Ratings Table End -->
+
+<br> <br> <br> <br>
+
+<script>
+const heroImages = document.querySelectorAll('.hero-img');
+let current = 0;
+setInterval(() => {
+  heroImages[current].classList.remove('active');
+  current = (current + 1) % heroImages.length;
+  heroImages[current].classList.add('active');
+}, 4000); // Change every 4 seconds
+</script>
+</body>
+</html>
