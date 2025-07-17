@@ -92,44 +92,6 @@
         }
         placeRunes();
         setInterval(placeRunes, 6000);
-
-        // Add this function to your countdown script
-        function sendWeeklyReminder() {
-            const targetDate = new Date(new Date().getFullYear(), 9, 20, 0, 0, 0, 0);
-            const now = new Date();
-            const diff = targetDate - now;
-            const days = Math.floor(diff / (1000 * 60 * 60 * 20));
-            
-            // Replace YOUR_WEBHOOK_KEY with your actual key from IFTTT
-            const webhookUrl = 'https://maker.ifttt.com/trigger/countdown_reminder/with/key/bIuY-LDlw-TO1GuYB-k0fsEAreS1aGgcQ14tbf1q7MC';
-            
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    value1: days,
-                    value2: 'October 20th',
-                    value3: 'Magical Countdown'
-                })
-            });
-        }
-
-        // Check if it's time to send reminder (once per week)
-        function checkForWeeklyReminder() {
-            const lastSent = localStorage.getItem('lastReminderSent');
-            const now = Date.now();
-            const oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
-            
-            if (!lastSent || (now - parseInt(lastSent)) > oneWeek) {
-                sendWeeklyReminder();
-                localStorage.setItem('lastReminderSent', now.toString());
-            }
-        }
-
-        // Call this when the page loads
-        checkForWeeklyReminder();
     </script>
 </body>
 </html>
