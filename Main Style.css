@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #222222;
-  color: #c4c4c4;
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+    color: #c4c4c4;
 }
 
 
@@ -10,525 +10,122 @@ body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
+    }
 
-    a{
-      color: #c4c4c4;
-      text-decoration: none;
-    } 
+    a {
+        color: #c4c4c4;
+        text-decoration: none;
+    }
 
-	.Desktop{
-		display: block;
-	}
-	.Mobile{
-		display: none;
-	}
-    
+    .Desktop {
+        display: block;
+    }
+
+    .Mobile {
+        display: none;
+    }
+
     /* #region Nav Bar Elements */
-      	nav {
-        	display: flex;
-        	justify-content: center;
-			vertical-align: middle;
-        	padding: 20px 0;
-        	background-color: #1a1a1a;
-        	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      	}
-      	nav a {
-        	margin: 0 15px;
-        	text-decoration: none;
-        	color: #c4c4c4;
-        	font-weight: bold;
-        	transition: transform 0.5s;
-      	}
-      	nav a:hover{
-        	transform: translateY(-5px);
-      	}
+    nav {
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        padding: 20px 0;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+    }
 
-		/* The container <div> - needed to position the dropdown content */
-		.dropdown {
-			float: right;
-			position: relative;
-		}
-		.dropdown img {
-			width: 50px;
-			height: 50px;
-		}
-		.dropbtn {
-			display: flex;
-    		cursor: pointer;
-    		background: none;
-    		border: none;
-    		border-radius: 30px;
-			padding-right: 20px;
-			padding-bottom: 5px;
-		}
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #c4c4c4;
+        font-weight: bold;
+        transition: transform 0.5s;
+    }
 
-		/* Dropdown Content (Hidden by Default) */
-		.dropdown-content {
-			width: 225px;
-   			display: none;
-    		background-color: rgb(0, 0, 0, 0.5);
-    		position: absolute;
-    		text-align: left;
-    		min-width: 160px;
-    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    		z-index: 5;
-    		border-radius: 30px;
-        	left: 50%; /* Add this */
-        	transform: translateX(-50%); /* Add this */
-		}
+    nav a:hover {
+        transform: translateY(-5px);
+    }
 
-		/* Links inside the dropdown */
-		.dropdown-content a {
-			font-size: 18px;
-    		padding: 12px 16px;
-    		text-decoration: none;
-    		display: block;
-		}
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        float: right;
+        position: relative;
+    }
 
-		/* Change color of dropdown links on hover */
-		.dropdown-content a:hover {
-    		background-color: rgb(128, 128, 128, 0.5);
-    		border-radius: 30px;
-		}
+    .dropdown img {
+        width: 50px;
+        height: 50px;
+    }
 
-		/* Show the dropdown menu on hover */
-		.dropdown:hover .dropdown-content {
-    		display: block;
-		}
+    .dropbtn {
+        display: flex;
+        cursor: pointer;
+        background: none;
+        border: none;
+        border-radius: 30px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        width: 225px;
+        display: none;
+        background-color: rgb(0, 0, 0, 0.5);
+        position: absolute;
+        text-align: left;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        border-radius: 30px;
+        left: 50%;
+        /* Add this */
+        transform: translateX(-50%);
+        /* Add this */
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        font-size: 18px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: rgb(128, 128, 128, 0.5);
+        border-radius: 30px;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
     /* #endregion */
 
     /* #region Hero Section Elements */
-      .hero {
-        text-align: center;
-        padding: 80px 20px;
-        max-width: 1500;
-      }
-      .hero img{
-        width: 300px;
-        background: #333;
-        border-radius: 300px;
-        align-items: center;
-        padding: 4px;
-      }
-      .hero h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-      }
-      .button {
-        display: inline-block;
-        color: #c4c4c4;
-        padding: 12px 24px;
-        background: none;
-        border: 2px solid #333;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: transform 0.5s;
-      }
-      .button:hover{
-        transform: translateY(-5px);
-        cursor: pointer;
-      }
-    /* #endregion */
-
-    /* #region Sections */
-
-      .section {
-        padding: 60px 20px;
-        text-align: center;
-      }
-      .section h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-      }
-
-      /* #region Game Card Section */
-        .games, .coming-soon, .more {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 20px;
-        }
-        .game-card {
-          background-color: #333;
-          text-align: left;
-          width: 200px;
-          border-radius: 10px;
-          padding-top: 2px;
-          padding-left: 2px;
-          padding-right: 2px;
-          padding-bottom: -10px;
-          color: #c4c4c4;
-          box-shadow: 0 2px 6px #333;
-          transition: transform 0.5s;
-          cursor: pointer;
-        }
-        .game-card img {
-          width: 100%;
-          border-radius: 8px;
-          
-        }
-        .game-card h1{
-          font-size: 20px;
-        }
-        .game-card:hover{
-          transform: translateY(-5px);
-        }
-      /* #endregion */
-
-    /* #endregion */
-
-	  /* #region Small Container */
-    	.small-container {
-      		max-width: 1200px;
-      		margin: auto;
-      		padding-left: 25px;
-      		padding-right: 25px;
-    	}
-	/* #endregion Small Container */
-
-    /* #region Game Page Elements */
-    
-        /* #region Devlog Elements */
-
-        .devlog {
-          background-color: rgba(0, 0, 0, 0.5);
-          padding: 20px;
-          border-radius: 30px;
-          margin: auto;
-          width: 30%;
-        }
-        .devlog h3 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-        }
-        .devlog h2 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-        }
-        .devlog p {
-          text-align: left;
-        }
-        .devlog img{
-          width: 300px;
-          border-radius: 20px;
-        }
-
-        /* #endregion */
-
-    /* #endregion */
-
-    /* #region Slideshow Elements */
-      .slideshow {
-        position: relative;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      .slide {
-        display: none;
-        padding: 10px;
-        background: #333;
-        border-radius: 10px;
-      }
-      .slide.active {
-        display: block;
-      }
-      
-      /* Slide image */
-      .slideshow img {
-        text-align: center;
-        width: 100%;
-        border-radius: 10px;
-      }
-
-      /* Slide text */
-      .slide-text {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        color: white;
-        font-size: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        border-radius: 5px;
-        text-align: left;
-      }
-
-      /* Slide name */
-      .slide-name {
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      /* Slide description */
-      .slide-description {
-        font-size: 16px;
-      }
-
-      /* Thumbnails */
-    .thumbnail-container {
-      display: flex;
-      max-block-size: 50%;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .thumbnail {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 30px;
-      border: 0.5px solid black;
-      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      background-color: #c4c4c4;
-      transition: transform 0.3s;
-    }
-
-    .thumbnail:hover {
-      transform: scale(1.1);
-    }
-
-    /* Button */
-    .slide-button {
-      display: inline-block;
-      background: #333;
-      border: none;
-      font-weight: bold;
-      color: #c4c4c4;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s;
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-    }
-
-    .slide-button:hover {
-      background-color: #232323;
-    }
-    /* #endregion */
-    
-    /* #region Form Elements */
-    form{
-        padding: 60px 20px;
-        text-align: center;
-    }
-    form input {
-      color: #c4c4c4;
-      text-align: left;
-      background: none;
-      width: 25%;
-      padding: 9px 30px;
-      border-radius: 30px;
-      border: 2px solid #333333;
-      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-    }
-    form button {
-      display: inline-block;
-      color: #c4c4c4;
-      background: none;
-      padding: 9px 30px;
-      margin: 30px 0;
-      border-radius: 30px;
-      border: 2px solid #333333;
-      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      transition: transform 0.5s;
-    }
-    form button:hover {
-      cursor: pointer;
-      transform: translateY(-2px);
-    }
-    form input::placeholder{
-      color: #a3a3a3;
-    }
-
-    /* #endregion */
-	
-	/* #region Column Ruler Elements */
-    	.column-ruler {
-      		display: flex;
-      		align-items: center;
-      		gap: 12px; /* Reduce this value for a smaller gap */
-    	}
-    	.column-left{
-      		width: 40%;
-    	}
-    	.column-right{
-     	 	width: 100%;
-    	}
-    	.column-left img{
-      	    width: auto;
-            max-width: 200px;
-      	    height: 100%;
-      	    border-radius: 20px;
-    	}
-        .Day-Column-Left{
-          width: 30%;
-        }
-        .Day-Column-Right{
-          width: 70%;
-        }
-	/* #endregion */
-  
-    /* #region Schedule Elements */
-
-        .Schedule {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 30px;
-            box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-            margin: auto;
-            width: 30%;
-        }
-        .Schedule h3 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-        }
-        .Schedule h2 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-        }
-        .Schedule h1 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-          font-size: 22px;
-        }
-        .Schedule p {
-          text-align: left;
-        }
-        .Schedule img{
-          width: 300px;
-          border-radius: 20px;
-        }
-
-        .Day {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 30px;
-            box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-            margin: auto;
-            width: auto;
-        }
-
-        /* #endregion */
-}
-
-@media only screen and (max-width: 970px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-    a{
-      color: #c4c4c4;
-      text-decoration: none;
-	  font-size: 13px;
-    }
-
-	.Desktop{
-		display: none;
-	}
-	.Mobile{
-		display: block;
-	}
-
-/* #region Nav Bar Elements */
-
-	/* #region Base Bar Elements */
-      	nav {
-        	display: flex;
-        	justify-content: right;
-        	background-color: #1a1a1a;
-        	box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      	}
-      	nav a {
-        	text-decoration: none;
-        	color: #c4c4c4;
-        	font-weight: bold;
-        	transition: transform 0.5s;
-      	}
-      	nav a:hover{
-        	transform: translateY(-5px);
-      	}
-    /* #endregion Base Bar Elements */
-
-	/* The container <div> - needed to position the dropdown content */
-	.dropdown {
-		float: right;
-		position: relative;
-	}
-
-	.dropdown img {
-		width: 100px;
-		height: 100px;
-	}
-
-	.dropbtn {
-		display: flex;
-     	align-items: right;
-    	cursor: pointer;
-    	background: none;
-    	border: none;
-    	border-radius: 30px;
-		padding-right: 20px;
-	}
-
-	/* Dropdown Content (Hidden by Default) */
-	.dropdown-content {
-		width: 225px;
-   		display: none;
-    	background-color: rgb(0, 0, 0, 0.5);
-    	position: absolute;
-    	text-align: left;
-    	min-width: 160px;
-    	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    	z-index: 5;
-    	border-radius: 30px;
-		right: 0; /* Add this */
-	}
-
-	/* Links inside the dropdown */
-	.dropdown-content a {
-		font-size: 18px;
-    	padding: 12px 16px;
-    	text-decoration: none;
-    	display: block;
-	}
-
-	/* Change color of dropdown links on hover */
-	.dropdown-content a:hover {
-    	background-color: rgb(128, 128, 128, 0.5);
-    	border-radius: 30px;
-	}
-
-	/* Show the dropdown menu on hover */
-	.dropdown:hover .dropdown-content {
-    	display: block;
-	}
-/* #endregion Nav Bar Dropdown Elements */
-
-
-/* #region Hero Section Elements */
     .hero {
-    	text-align: center;
+        text-align: center;
         padding: 80px 20px;
         max-width: 1500;
     }
-    .hero img{
+
+    .hero img {
         width: 300px;
+        background: #333;
         border-radius: 300px;
         align-items: center;
         padding: 4px;
     }
+
     .hero h1 {
         font-size: 48px;
         margin-bottom: 20px;
     }
+
     .button {
         display: inline-block;
         color: #c4c4c4;
@@ -540,123 +137,141 @@ body {
         font-weight: bold;
         transition: transform 0.5s;
     }
-    .button:hover{
+
+    .button:hover {
         transform: translateY(-5px);
         cursor: pointer;
     }
-/* #endregion */
-
-    /* #region Sections */
-
-      .section {
-        padding: 60px 20px;
-        text-align: center;
-      }
-      .section h2 {
-        font-size: 20px;
-        margin-bottom: 40px;
-      }
-
-      /* #region Game Card Section */
-        .games, .coming-soon, .more {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 20px;
-        }
-        .game-card {
-          background-color: #333;
-          text-align: left;
-          width: 200px;
-          border-radius: 10px;
-          padding-top: 2px;
-          padding-left: 2px;
-          padding-right: 2px;
-          padding-bottom: -10px;
-          color: #c4c4c4;
-          box-shadow: 0 2px 6px #333;
-          transition: transform 0.5s;
-          cursor: pointer;
-        }
-        .game-card img {
-          width: 100%;
-          border-radius: 8px;
-          
-        }
-        .game-card h1{
-          font-size: 20px;
-        }
-        .game-card:hover{
-          transform: translateY(-5px);
-        }
-      /* #endregion */
 
     /* #endregion */
 
-    .small-container {
-      max-width: 1200px;
-      margin: auto;
-      padding-left: 25px;
-      padding-right: 25px;
+    /* #region Sections */
+
+    .section {
+        padding: 60px 20px;
+        text-align: center;
     }
 
+    .section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    /* #region Game Card Section */
+    .games,
+    .coming-soon,
+    .more {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .game-card {
+        background-color: #333;
+        text-align: left;
+        width: 200px;
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-bottom: -10px;
+        color: #c4c4c4;
+        box-shadow: 0 2px 6px #333;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+
+    .game-card img {
+        width: 100%;
+        border-radius: 8px;
+
+    }
+
+    .game-card h1 {
+        font-size: 20px;
+    }
+
+    .game-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* #endregion */
+
+    /* #endregion */
+
+    /* #region Small Container */
+    .small-container {
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* #endregion Small Container */
+
     /* #region Game Page Elements */
-    
-      /* #region Devlog Elements */
 
-        .devlog {
-          	background-color: rgba(0, 0, 0, 0.5);
-          	padding: 10px;
-          	border-radius: 30px;
-          	
-          	margin: auto;
-          	width: auto;
-			margin: 20px;
-        }
-		.devlog a{
-			font-size: 13px;;
-		}
-        .devlog h3 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-        }
-        .devlog h2 {
-          text-align: left;
-          text-shadow: 3px 3px black;
-        }
-        .devlog p {
-          text-align: left;
-        }
+    /* #region Devlog Elements */
 
-      /* #endregion */
+    .devlog {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 30px;
+        margin: auto;
+        width: 30%;
+    }
+
+    .devlog h3 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+    }
+
+    .devlog h2 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+    }
+
+    .devlog p {
+        text-align: left;
+    }
+
+    .devlog img {
+        width: 300px;
+        border-radius: 20px;
+    }
+
+    /* #endregion */
 
     /* #endregion */
 
     /* #region Slideshow Elements */
-      .slideshow {
+    .slideshow {
         position: relative;
         max-width: 600px;
         margin: 0 auto;
-      }
-      .slide {
+    }
+
+    .slide {
         display: none;
         padding: 10px;
         background: #333;
         border-radius: 10px;
-      }
-      .slide.active {
+    }
+
+    .slide.active {
         display: block;
-      }
-      
-      /* Slide image */
-      .slideshow img {
+    }
+
+    /* Slide image */
+    .slideshow img {
         text-align: center;
         width: 100%;
         border-radius: 10px;
-      }
+    }
 
-      /* Slide text */
-      .slide-text {
+    /* Slide text */
+    .slide-text {
         position: absolute;
         bottom: 20px;
         left: 20px;
@@ -666,199 +281,752 @@ body {
         padding: 10px;
         border-radius: 5px;
         text-align: left;
-      }
+    }
 
-      /* Slide name */
-      .slide-name {
+    /* Slide name */
+    .slide-name {
         font-size: 24px;
         font-weight: bold;
-      }
+    }
 
-      /* Slide description */
-      .slide-description {
+    /* Slide description */
+    .slide-description {
         font-size: 16px;
-      }
+    }
 
-      /* Thumbnails */
+    /* Thumbnails */
     .thumbnail-container {
-      display: flex;
-      max-block-size: 50%;
-      justify-content: center;
-      margin-top: 10px;
+        display: flex;
+        max-block-size: 50%;
+        justify-content: center;
+        margin-top: 10px;
     }
 
     .thumbnail {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 30px;
-      border: 0.5px solid black;
-      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      background-color: #c4c4c4;
-      transition: transform 0.3s;
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 30px;
+        border: 0.5px solid black;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        background-color: #c4c4c4;
+        transition: transform 0.3s;
     }
 
     .thumbnail:hover {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
 
     /* Button */
     .slide-button {
-      display: inline-block;
-      background: #333;
-      border: none;
-      font-weight: bold;
-      color: #c4c4c4;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s;
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
+        display: inline-block;
+        background: #333;
+        border: none;
+        font-weight: bold;
+        color: #c4c4c4;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.3s;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
     }
 
     .slide-button:hover {
-      background-color: #232323;
+        background-color: #232323;
     }
+
     /* #endregion */
-    
+
     /* #region Form Elements */
-    form{
+    form {
         padding: 60px 20px;
         text-align: center;
     }
+
     form input {
-      color: #c4c4c4;
-      text-align: left;
-      background: none;
-      width: 25%;
-      padding: 9px 30px;
-      border-radius: 30px;
-      border: 2px solid #333333;
-      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        color: #c4c4c4;
+        text-align: left;
+        background: none;
+        width: 25%;
+        padding: 9px 30px;
+        border-radius: 30px;
+        border: 2px solid #333333;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
     }
+
     form button {
-      display: inline-block;
-      color: #c4c4c4;
-      background: none;
-      padding: 9px 30px;
-      margin: 30px 0;
-      border-radius: 30px;
-      border: 2px solid #333333;
-      box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
-      transition: transform 0.5s;
+        display: inline-block;
+        color: #c4c4c4;
+        background: none;
+        padding: 9px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        border: 2px solid #333333;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        transition: transform 0.5s;
     }
+
     form button:hover {
-      cursor: pointer;
-      transform: translateY(-2px);
+        cursor: pointer;
+        transform: translateY(-2px);
     }
-    form input::placeholder{
-      color: #a3a3a3;
+
+    form input::placeholder {
+        color: #a3a3a3;
     }
 
     /* #endregion */
-  
+
+    /* #region Column Ruler Elements */
     .column-ruler {
-      	display: flex;
-		flex-direction: row;
-      	align-items: center;
-      	gap: 12px; /* Reduce this value for a smaller gap */
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        /* Reduce this value for a smaller gap */
     }
 
-	.column-left,
-	.column-left img {
-  		width: 150px !important;    /* Make image responsive */
-  		max-width: 200px;          /* Optional: limit max image width */
-  		height: auto !important;
-  		display: flex;
-		border-radius: 20px;
-	}
+    .column-left {
+        width: 40%;
+    }
+
+    .column-right {
+        width: 100%;
+    }
+
+    .column-left img {
+        width: auto;
+        max-width: 200px;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .Day-Column-Left {
+        width: 30%;
+    }
+
+    .Day-Column-Right {
+        width: 70%;
+    }
+
+    /* #endregion */
+
+    /* #region Schedule Elements */
+
+    .Schedule {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        margin: auto;
+        width: 30%;
+    }
+
+    .Schedule h3 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+    }
+
+    .Schedule h2 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+    }
+
+    .Schedule h1 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+        font-size: 22px;
+    }
+
+    .Schedule p {
+        text-align: left;
+    }
+
+    .Schedule img {
+        width: 300px;
+        border-radius: 20px;
+    }
+
+    .Day {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        margin: auto;
+        width: auto;
+    }
+
+    /* #endregion */
+
+    /* #region Table */
+    table {
+        width: 70%;
+        text-align: left;
+        border-collapse: collapse;
+        margin: 1em auto;
+        border-radius: 30px;
+        /* Always rounded */
+        overflow: hidden;
+        /* Ensures children respect border-radius */
+    }
+
+    th,
+    td {
+        padding: 0.75em 1em;
+        background: none;
+        border-radius: 0;
+        /* Remove if you want only the table corners rounded */
+    }
+
+    td img {
+        border-radius: 15px;
+        max-width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s;
+    }
+
+    .td img:hover {
+        transform: scale(2);
+        transition: transform 0.3s ease;
+    }
+
+    /* Add to Main Style.css or inside <style> */
+    .ratings-table th,
+    .ratings-table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .ratings-table img {
+        border-radius: 8px;
+    }
+
+    .ratings-table th:first-child,
+    .ratings-table td:first-child {
+        width: 140px;
+        /* Adjust as needed */
+        min-width: 120px;
+        max-width: 200px;
+    }
+
+    /* Add to Main Style.css */
+    .table-scroll-x {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .scroll-box {
+        overflow-x: auto;
+        width: 700px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 30px;
+        box-shadow: 0 2px 4px #c4c4c4;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Make sure the table fits the scroll box */
+    .scroll-box .ratings-table {
+        border-radius: 30px;
+        overflow: hidden;
+        min-width: 700px;
+        /* or whatever fits your columns */
+    }
+    
+    /* #endregion Table */
+
+}
+
+@media only screen and (max-width: 970px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        color: #c4c4c4;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .Desktop {
+        display: none;
+    }
+
+    .Mobile {
+        display: block;
+    }
+
+    /* #region Nav Bar Elements */
+
+    /* #region Base Bar Elements */
+    nav {
+        display: flex;
+        justify-content: right;
+        background-color: #1a1a1a;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #c4c4c4;
+        font-weight: bold;
+        transition: transform 0.5s;
+    }
+
+    nav a:hover {
+        transform: translateY(-5px);
+    }
+
+    /* #endregion Base Bar Elements */
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        float: right;
+        position: relative;
+    }
+
+    .dropdown img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dropbtn {
+        display: flex;
+        align-items: right;
+        cursor: pointer;
+        background: none;
+        border: none;
+        border-radius: 30px;
+        padding-right: 20px;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        width: 225px;
+        display: none;
+        background-color: rgb(0, 0, 0, 0.5);
+        position: absolute;
+        text-align: left;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        border-radius: 30px;
+        right: 0;
+        /* Add this */
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        font-size: 18px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: rgb(128, 128, 128, 0.5);
+        border-radius: 30px;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* #endregion Nav Bar Dropdown Elements */
+
+
+    /* #region Hero Section Elements */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        max-width: 1500;
+    }
+
+    .hero img {
+        width: 300px;
+        border-radius: 300px;
+        align-items: center;
+        padding: 4px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        color: #c4c4c4;
+        padding: 12px 24px;
+        background: none;
+        border: 2px solid #333;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: transform 0.5s;
+    }
+
+    .button:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+    }
+
+    /* #endregion */
+
+    /* #region Sections */
+
+    .section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* #region Game Card Section */
+    .games,
+    .coming-soon,
+    .more {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .game-card {
+        background-color: #333;
+        text-align: left;
+        width: 200px;
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-bottom: -10px;
+        color: #c4c4c4;
+        box-shadow: 0 2px 6px #333;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+
+    .game-card img {
+        width: 100%;
+        border-radius: 8px;
+
+    }
+
+    .game-card h1 {
+        font-size: 20px;
+    }
+
+    .game-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* #endregion */
+
+    /* #endregion */
+
+    .small-container {
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* #region Game Page Elements */
+
+    /* #region Devlog Elements */
+
+    .devlog {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 30px;
+
+        margin: auto;
+        width: auto;
+        margin: 20px;
+    }
+
+    .devlog a {
+        font-size: 13px;
+        ;
+    }
+
+    .devlog h3 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+    }
+
+    .devlog h2 {
+        text-align: left;
+        text-shadow: 3px 3px black;
+    }
+
+    .devlog p {
+        text-align: left;
+    }
+
+    /* #endregion */
+
+    /* #endregion */
+
+    /* #region Slideshow Elements */
+    .slideshow {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .slide {
+        display: none;
+        padding: 10px;
+        background: #333;
+        border-radius: 10px;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    /* Slide image */
+    .slideshow img {
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Slide text */
+    .slide-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    /* Slide name */
+    .slide-name {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* Slide description */
+    .slide-description {
+        font-size: 16px;
+    }
+
+    /* Thumbnails */
+    .thumbnail-container {
+        display: flex;
+        max-block-size: 50%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .thumbnail {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 30px;
+        border: 0.5px solid black;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        background-color: #c4c4c4;
+        transition: transform 0.3s;
+    }
+
+    .thumbnail:hover {
+        transform: scale(1.1);
+    }
+
+    /* Button */
+    .slide-button {
+        display: inline-block;
+        background: #333;
+        border: none;
+        font-weight: bold;
+        color: #c4c4c4;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.3s;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .slide-button:hover {
+        background-color: #232323;
+    }
+
+    /* #endregion */
+
+    /* #region Form Elements */
+    form {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    form input {
+        color: #c4c4c4;
+        text-align: left;
+        background: none;
+        width: 25%;
+        padding: 9px 30px;
+        border-radius: 30px;
+        border: 2px solid #333333;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+    }
+
+    form button {
+        display: inline-block;
+        color: #c4c4c4;
+        background: none;
+        padding: 9px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        border: 2px solid #333333;
+        box-shadow: 0 2px 4px rgba(192, 192, 192, 0.1);
+        transition: transform 0.5s;
+    }
+
+    form button:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+    }
+
+    form input::placeholder {
+        color: #a3a3a3;
+    }
+
+    /* #endregion */
+
+    .column-ruler {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        /* Reduce this value for a smaller gap */
+    }
+
+    .column-left,
+    .column-left img {
+        width: 150px !important;
+        /* Make image responsive */
+        max-width: 200px;
+        /* Optional: limit max image width */
+        height: auto !important;
+        display: flex;
+        border-radius: 20px;
+    }
+
     /*.column-left{
-      	width: 40%;
-    }*/
-    .column-right{
-      	width: 100%;
+		  width: 40%;
+	}*/
+    .column-right {
+        width: 100%;
     }
 
-  	/*.column-left img{
-      	width: 150px;
-      	height: 100%;
-      	border-radius: 20px;
-    }*/
-  }
+    /*.column-left img{
+		  width: 150px;
+		  height: 100%;
+		  border-radius: 20px;
+	}*/
 
-/* Table Styles */
-table {
-  width: 30%;
-  text-align: left;
-  border-collapse: collapse;
-  margin: 1em auto;
-  border-radius: 30px; /* Always rounded */
-  overflow: hidden;    /* Ensures children respect border-radius */
+    /* #region Table */
+    table {
+        width: 30%;
+        text-align: left;
+        border-collapse: collapse;
+        margin: 1em auto;
+        border-radius: 30px;
+        /* Always rounded */
+        overflow: hidden;
+        /* Ensures children respect border-radius */
+    }
+
+    th,
+    td {
+        padding: 0.75em 1em;
+        background: none;
+        border-radius: 0;
+        /* Remove if you want only the table corners rounded */
+    }
+
+    td img {
+        border-radius: 15px;
+        max-width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s;
+    }
+
+    .td img:hover {
+        transform: scale(2);
+        transition: transform 0.3s ease;
+    }
+
+    /* Add to Main Style.css or inside <style> */
+    .ratings-table th,
+    .ratings-table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .ratings-table img {
+        border-radius: 8px;
+    }
+
+    .ratings-table th:first-child,
+    .ratings-table td:first-child {
+        width: 140px;
+        /* Adjust as needed */
+        min-width: 120px;
+        max-width: 200px;
+    }
+
+    /* Add to Main Style.css */
+    .table-scroll-x {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .scroll-box {
+        overflow-x: auto;
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 30px;
+        box-shadow: 0 2px 4px #c4c4c4;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Make sure the table fits the scroll box */
+    .scroll-box .ratings-table {
+        border-radius: 30px;
+        overflow: hidden;
+        min-width: 700px;
+        /* or whatever fits your columns */
+    }
+
+    /* #endregion Table */
 }
-
-th, td {
-  padding: 0.75em 1em;
-  background: none;
-  border-radius: 0; /* Remove if you want only the table corners rounded */
-}
-
-td img {
-  border-radius: 15px;
-  max-width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s; 
-}
-
-.td img:hover{
-  transform: scale(2);
-  transition: transform 0.3s ease;
-}
-
-/* Add to Main Style.css or inside <style> */
-.ratings-table th, .ratings-table td {
-  text-align: center;
-  vertical-align: middle;
-}
-.ratings-table img {
-  border-radius: 8px;
-}
-
-.ratings-table th:first-child,
-.ratings-table td:first-child {
-  width: 140px; /* Adjust as needed */
-  min-width: 120px;
-  max-width: 200px;
-}
-
-/* Add to Main Style.css */
-.table-scroll-x {
-  overflow-x: auto;
-  width: 100%;
-}
-
-.scroll-box {
-  overflow-x: auto;
-  width: 600px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-  border-radius: 30px;
-  box-shadow: 0 2px 4px #c4c4c4;
-  background: rgba(0,0,0,0.5);
-}
-
-/* Make sure the table fits the scroll box */
-.scroll-box .ratings-table {
-  border-radius: 30px;
-  overflow: hidden;
-  min-width: 700px; /* or whatever fits your columns */
-}
-
-
-
