@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Countdown</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at top left, #2d0036 0%, #0a001a 100%);
+            color: #f3e9ff;
+            font-family: 'Cinzel Decorative', 'Papyrus', fantasy, serif;
+            overflow: hidden;
+        }
+        .magic-glow {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .countdown-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(34, 0, 51, 0.85);
+            border: 4px solid #a259ff;
+            border-radius: 24px;
+            box-shadow: 0 0 40px 10px #a259ff88, 0 0 80px 20px #fff0  inset;
+            padding: 48px 64px;
+            text-align: center;
+            max-width: 420px;
+            margin: auto;
+        }
+        .countdown-title {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            text-shadow: 0 0 12px #fff, 0 0 24px #a259ff;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .countdown-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .countdown-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 8px #a259ff, 0 0 16px #fff0;
+        }
+        .countdown-label {
+            font-size: 1rem;
+            color: #d1b3ff;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+        /* Magical sparkles */
+        .sparkle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.7;
+            animation: sparkle 3s infinite linear;
+        }
+        @keyframes sparkle {
+            0% { opacity: 0.7; transform: scale(1) translateY(0); }
+            50% { opacity: 1; transform: scale(1.3) translateY(-10px); }
+            100% { opacity: 0.7; transform: scale(1) translateY(0); }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="magic-glow" id="magicGlow"></div>
+    <div class="countdown-container">
+        <div class="countdown-title">Countdown</div>
+        <div class="countdown" id="countdown">
+            <!-- JS will populate here -->
+        </div>
+    </div>
+    <script>
+        // Countdown logic
+        function updateCountdown() {
+            const targetDate = new Date(new Date().getFullYear(), 9, 20, 0, 0, 0, 0); // October is month 9 (0-indexed)
+            const now = new Date();
+            // If today is after Oct 24, count to next year's Oct 24
+            if (now > targetDate) {
+                targetDate.setFullYear(targetDate.getFullYear() + 1);
+            }
+            const diff = targetDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            document.getElementById('countdown').innerHTML = `
+                <div class="countdown-segment">
+                    <span class="countdown-number">${days}</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-segment">
+                    <span class="countdown-number">${hours}</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-segment">
+                    <span class="countdown-number">${minutes}</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-segment">
+                    <span class="countdown-number">${seconds}</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            `;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Magical sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            const size = Math.random() * 8 + 4;
+            sparkle.style.width = `${size}px`;
+            sparkle.style.height = `${size}px`;
+            sparkle.style.left = `${Math.random() * 100}%`;
+            sparkle.style.top = `${Math.random() * 100}%`;
+            sparkle.style.background = `radial-gradient(circle, #fff 0%, #a259ff 60%, transparent 100%)`;
+            sparkle.style.filter = `blur(${Math.random() * 2}px)`;
+            sparkle.style.animationDuration = `${2 + Math.random() * 2}s`;
+            document.getElementById('magicGlow').appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 4000);
+        }
+        setInterval(createSparkle, 200);
+    </script>
+</body>
+</html>
