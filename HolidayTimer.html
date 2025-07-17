@@ -95,10 +95,10 @@
 
         // Add this function to your countdown script
         function sendWeeklyReminder() {
-            const targetDate = new Date(new Date().getFullYear(), 9, 24, 0, 0, 0, 0);
+            const targetDate = new Date(new Date().getFullYear(), 9, 20, 0, 0, 0, 0);
             const now = new Date();
             const diff = targetDate - now;
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const days = Math.floor(diff / (1000 * 60 * 60 * 20));
             
             // Replace YOUR_WEBHOOK_KEY with your actual key from IFTTT
             const webhookUrl = 'https://maker.ifttt.com/trigger/countdown_reminder/with/key/bIuY-LDlw-TO1GuYB-k0fsEAreS1aGgcQ14tbf1q7MC';
@@ -110,7 +110,7 @@
                 },
                 body: JSON.stringify({
                     value1: days,
-                    value2: 'October 24th',
+                    value2: 'October 20th',
                     value3: 'Magical Countdown'
                 })
             });
