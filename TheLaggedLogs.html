@@ -4,49 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Images/Channel Logos/KrimsonKnightsLogo.png">
+    <link rel="icon" href="Images/Channel Logos/Lagged Logs Logo.png">
     <link rel="stylesheet" href="Main Style.css?v=1.0">
-    <title>Krimson Knights</title>
+    <title>The Lagged Logs</title>
 
 </head>
 <style>
     .hero img {
-        background: #ff0000;
+        background: #56047e;
     }
 
     .scroll-box {
-        box-shadow: 0 2px 4px #ff0000;
+        box-shadow: 0 2px 4px #56047e;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .scroll-box-inner {
+        overflow-x: auto;
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        padding-bottom: 8px;
+        scrollbar-gutter: stable;
     }
 
     .tier-separator td {
         border-radius: 30px;
         height: 8px;
-        background: linear-gradient(90deg, #290000 0%, #fc5b5b 100%);
+        background: linear-gradient(90deg, #1f0029 0%, #4a006f 100%);
         border: none;
         padding: 0;
     }
 
-    .scroll-box::-webkit-scrollbar {
+    .scroll-box-inner::-webkit-scrollbar {
         height: 12px;
         background: transparent;
         border-radius: 30px;
     }
 
-    .scroll-box::-webkit-scrollbar-thumb {
-        background: #7c0000;
+    .scroll-box-inner::-webkit-scrollbar-thumb {
+        background: #56047e;
         border-radius: 30px;
         border: 3px solid rgba(0, 0, 0, 0.5);
     }
 
-    .scroll-box::-webkit-scrollbar-track {
-        background: #7c0000;
+    .scroll-box-inner::-webkit-scrollbar-track {
+        background: #56047e;
         border-radius: 30px;
     }
 
     /* Firefox scrollbar styling */
-    .scroll-box {
+    .scroll-box-inner {
         scrollbar-width: thin;
-        scrollbar-color: #7c0000 rgba(0, 0, 0, 0.2);
+        scrollbar-color: #56047e rgba(0, 0, 0, 0.2);
     }
 
     .ratings-table td img {
@@ -56,7 +67,7 @@
     .ratings-table td:not(.tier-image):hover img {
         transform: scale(1.15);
         z-index: 2;
-        box-shadow: 0 4px 16px #7c0000aa;
+        box-shadow: 0 4px 16px #56047e;
     }
 
     .hero {
@@ -85,7 +96,7 @@
         /* cover ensures the image fills the circle */
         border-radius: 50%;
         /* makes the image circular */
-        background: #ff0000;
+        background: #56047e;
         /* fallback background color */
     }
 
@@ -101,7 +112,7 @@
     <nav>
         <!-- #region Desktop Navigation Elements -->
         <div class="Desktop">
-            <a href="KrimsonKnights.html">Krimson Knights</a>
+            <a href="LilamLagged.html">LilamLagged</a>
             <a href="Bingaling.html">Bingaling's Blender</a>
             <a href="TheSerpentsWhisper.html">The Serpents Whisper</a>
             <a href="MegaVerse.html">MegaVerse</a>
@@ -140,15 +151,16 @@
     </nav>
 
     <div class="hero">
-        <img class="hero-img active" src="Images/Channel Logos/The Krimson Codex.png" alt="Slide 1">
-        <img class="hero-img" src="Images/Channel Logos/KrimsonKnightsLogo.png" alt="Slide 2">
+        <img class="hero-img active" src="Images/Channel Logos/Lagged Logs Logo.png" alt="Slide 1">
+        <img class="hero-img" src="Images/Channel Logos/LilamLagged Logo.png" alt="Slide 2">
     </div>
 
     <br> <br> <br>
 
     <!-- Ratings Table Start -->
     <div class="scroll-box">
-        <table class="ratings-table">
+        <div class="scroll-box-inner">
+            <table class="ratings-table">
             <h2>Ratings</h2>
             <p>A list of my ratings for games, TV shows, & Films</p>
             <br>
@@ -196,8 +208,10 @@
                 <td class="tier-image" rowspan="2">
                     <img src="Images/Tier Images/The Krimson Codex/0. Platinum Image.png" alt="Bronze Tier" width="100">
                 </td>
-                <td><a target="_blank" href="https://store.steampowered.com/app/3527290/PEAK/"> <img
-                            src="Images/Tier Images/The Krimson Codex/1. PEAK.png" alt="PEAK" width="100"></a></td>
+                <td><a target="_blank" href="https://store.steampowered.com/app/3527290/PEAK/"> 
+                        <img src="Images/Tier Images/The Krimson Codex/1. PEAK.png" alt="PEAK" width="100">
+                    </a>
+                </td>
                 <td><img src="Images/Reviews/review2.png" alt="" width="100"></td>
                 <td><img src="Images/Reviews/review3.png" alt="" width="100"></td>
             </tr>
@@ -216,7 +230,7 @@
                 <td class="tier-image" rowspan="2">
                     <img src="Images/Tier Images/The Krimson Codex/0. Gold Image.png" alt="Bronze Tier" width="100">
                 </td>
-                <td><img src="Images/Reviews.review1.png" alt="" width="100"></td>
+                <td><img src="Images/Reviews/review1.png" alt="" width="100"></td>
                 <td><img src="Images/Reviews/review2.png" alt="" width="100"></td>
                 <td><img src="Images/Reviews/review3.png" alt="" width="100"></td>
             </tr>
@@ -264,7 +278,8 @@
             </tr>
             <!-- #endregion Bronze Tier -->
 
-        </table>
+            </table>
+        </div>
     </div>
     <!-- Ratings Table End -->
 
@@ -278,6 +293,44 @@
             current = (current + 1) % heroImages.length;
             heroImages[current].classList.add('active');
         }, 4000); // Change every 4 seconds
+
+        const scrollBox = document.querySelector('.scroll-box-inner');
+
+        if (scrollBox) {
+            let targetScrollLeft = scrollBox.scrollLeft;
+            let animationFrameId = null;
+
+            const maxScrollLeft = () => scrollBox.scrollWidth - scrollBox.clientWidth;
+
+            const animateScroll = () => {
+                const distance = targetScrollLeft - scrollBox.scrollLeft;
+                scrollBox.scrollLeft += distance * 0.14;
+
+                if (Math.abs(distance) > 0.5) {
+                    animationFrameId = requestAnimationFrame(animateScroll);
+                } else {
+                    scrollBox.scrollLeft = targetScrollLeft;
+                    animationFrameId = null;
+                }
+            };
+
+            scrollBox.addEventListener('wheel', (event) => {
+                const wheelDelta = Math.abs(event.deltaY) > Math.abs(event.deltaX)
+                    ? event.deltaY
+                    : event.deltaX;
+
+                targetScrollLeft = Math.min(
+                    Math.max(targetScrollLeft + wheelDelta * 0.75, 0),
+                    maxScrollLeft()
+                );
+
+                if (!animationFrameId) {
+                    animationFrameId = requestAnimationFrame(animateScroll);
+                }
+
+                event.preventDefault();
+            }, { passive: false });
+        }
     </script>
 </body>
 
